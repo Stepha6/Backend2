@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends, HTTPException
 from auth import verificar_farmaceutico
-from historia_medica import GetHistoriaMedicaByPatientId
+from historia_medica import GetHistoriaMedicaPorIdPaciente
 
 from fastapi import FastAPI, HTTPException, Request
 import uvicorn
