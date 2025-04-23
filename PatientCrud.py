@@ -4,8 +4,8 @@ from fhir.resources.patient import Patient
 import json
 
 # Conexión a colecciones
-pacientes_collection = connect_to_mongodb("EntregaDeMedicamentos", "pacientes")
-historia_collection = connect_to_mongodb("EntregaDeMedicamentos", "historiaMedica")
+pacientes_collection = connect_to_mongodb("SamplePatientService2", "pacientes")
+historia_collection = connect_to_mongodb("SamplePatientService2", "historiaMedica")
 
 # Obtener paciente por ID
 def GetPatientById(patient_id: str):
