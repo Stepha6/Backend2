@@ -51,6 +51,10 @@ async def add_patient(request: Request):
         return {"_id":patient_id}  # Return patient id
     else:
         raise HTTPException(status_code=500, detail=f"Validating error: {status}")
+
+@app.get("/")
+def read_root():
+    return {"message": "Servidor backend funcionando correctamente"}
 if __name__ == '__main__':
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
