@@ -19,7 +19,7 @@ router = APIRouter()
 
 @router.get("/historia-medica/{patient_id}")
 def obtener_historia_medica(patient_id: str, usuario=Depends(verificar_farmaceutico)):
-    status, historia = GetHistoriaMedicaByPatientId(patient_id)
+    status, historia = GetHistoriaMedicaPorIdPaciente(patient_id)
     if status == "success":
         return historia
     raise HTTPException(status_code=404, detail="Historia médica no encontrada")
